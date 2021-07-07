@@ -12,6 +12,12 @@ public class Main {
         patrat.draw();
         dreptunghi.draw();
         System.out.println(((Patrat) patrat).getPerimetru());
-//        patrat.get
+
+        Shape[] array = new Shape[]{new Patrat(5), new Dreptunghi(5, 6), new Patrat(4)};
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] instanceof Patrat) {
+                System.out.println(((Patrat)array[i]).getPerimetru());
+            }
+        }
     }
 }
