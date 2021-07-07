@@ -11,5 +11,7 @@ public class Main {
 
         patrat.draw();
         dreptunghi.draw();
+        System.out.println(((Patrat) patrat).getPerimetru());
+//        patrat.get
     }
 }

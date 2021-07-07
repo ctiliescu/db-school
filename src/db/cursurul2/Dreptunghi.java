@@ -15,4 +15,9 @@ public class Dreptunghi extends Shape{
     public int getArea() {
         return L*l;
     }
+
+    @Override
+    public void draw() {
+        System.out.println("Draw dreptunghi with L: " + L + " and l: " + l);
+    }
 }

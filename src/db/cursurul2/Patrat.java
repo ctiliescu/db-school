@@ -12,4 +12,8 @@ public class Patrat extends Shape {
     public int getArea() {
         return l*l;
     }
+
+    public int getPerimetru() {
+        return 4 * l;
+    }
 }
