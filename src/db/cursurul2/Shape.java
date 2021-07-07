@@ -1,13 +1,8 @@
 package db.cursurul2;
 
-public class Shape {
+public abstract class Shape {
     private String name;
     private static int count = 0;
-
-    public Shape() {
-        this.name = "undefined";
-        count++;
-    }
 
     public Shape(String name) {
         this.name = name;
@@ -22,9 +17,7 @@ public class Shape {
         return name;
     }
 
-    public int getArea() {
-        return  0;
-    }
+    public abstract int getArea();
 
     public static int getCount() {
         return count;
