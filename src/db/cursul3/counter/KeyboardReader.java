@@ -1,6 +1,5 @@
 package db.cursul3.counter;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class KeyboardReader implements WordReader {
