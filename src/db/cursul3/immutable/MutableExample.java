@@ -1,4 +1,4 @@
-package db.cursul3;
+package db.cursul3.immutable;
 
 public class MutableExample {
 

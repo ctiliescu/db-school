@@ -1,4 +1,4 @@
-package db.cursul3;
+package db.cursul3.immutable;
 
 public class MutableObject implements Cloneable {
     private String string1;

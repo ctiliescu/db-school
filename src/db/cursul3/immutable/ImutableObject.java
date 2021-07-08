@@ -1,4 +1,4 @@
-package db.cursul3;
+package db.cursul3.immutable;
 
 import java.util.Arrays;
 
