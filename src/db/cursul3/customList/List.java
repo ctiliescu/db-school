@@ -34,4 +34,17 @@ public class List {
         }
     }
 
+    public void add(int pos, String s) throws AddException {
+        if (pos < 0 || (head == null && pos > 0)) {
+            throw new AddException();
+        } else {
+            if (pos == 1) {
+                head.setNext(new Node(s, head.getNext()));
+            } else if (pos == 0) {
+                head = new Node(s, head);
+            } else {
+                head.add(pos - 1 ,s);
+            }
+        }
+    }
 }

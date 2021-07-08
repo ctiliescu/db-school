@@ -8,6 +8,11 @@ public class Node {
         this.value = value;
     }
 
+    public Node(String value, Node next) {
+        this.value = value;
+        this.next = next;
+    }
+
     public String getValue() {
         return value;
     }
@@ -23,8 +28,20 @@ public class Node {
     public void add(String s){
         if(next != null){
             next.add(s);
-        }else {
+        } else {
             next = new Node(s);
+        }
+    }
+
+    public void add(int pos, String s) throws AddException {
+        if (pos == 0) {
+            next = new Node(s, next);
+        } else {
+            if (next == null) {
+                throw new AddException();
+            } else {
+                next.add(pos - 1, s);
+            }
         }
     }
 }
