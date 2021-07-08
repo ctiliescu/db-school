@@ -1,6 +1,6 @@
 package db.cursul3;
 
-public class MutableObject implements Cloneable{
+public class MutableObject implements Cloneable {
     private String string1;
     private String string2;
     private int integer;
@@ -10,7 +10,7 @@ public class MutableObject implements Cloneable{
         this.string1 = "string1";
         this.string2 = "string2";
         this.integer = 0;
-        this.array = new int[]{1,4};
+        this.array = new int[]{1, 4};
     }
 
     public MutableObject(String string1, String string2, int integer, int[] array) {
@@ -25,7 +25,7 @@ public class MutableObject implements Cloneable{
     }
 
     public void setString1(String string1) {
-        if(!string1.isEmpty()) {
+        if (!string1.isEmpty()) {
             this.string1 = string1;
         }
     }
@@ -55,8 +55,17 @@ public class MutableObject implements Cloneable{
     }
 
     @Override
-    protected MutableObject clone(){
-        MutableObject mutable2 = new MutableObject(this.string1, this.string2, this.integer, this.array);
+    protected MutableObject clone() {
+        int[] newArray = cloneArray();
+        MutableObject mutable2 = new MutableObject(this.string1, this.string2, this.integer, newArray);
         return mutable2;
+    }
+
+    private int[] cloneArray() {
+        int[] newArray = new int[this.getArray().length];
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i];
+        }
+        return newArray;
     }
 }
