@@ -7,6 +7,8 @@ public class Main {
         myList.add("sir1");
         myList.add("sir2");
 
+        myList.recursiveAdd("Theo");
+
         myList.print();
     }
 }

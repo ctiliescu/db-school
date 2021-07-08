@@ -16,6 +16,14 @@ public class List {
             p.setNext(new Node(s));
         }
     }
+    public void recursiveAdd(String s){
+        if(head == null){
+            head = new Node(s);
+        } else {
+            head.add(s);
+
+        }
+    }
 
     public void print() {
         Node p = head;

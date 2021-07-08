@@ -19,4 +19,12 @@ public class Node {
     public void setNext(Node next) {
         this.next = next;
     }
+
+    public void add(String s){
+        if(next != null){
+            next.add(s);
+        }else {
+            next = new Node(s);
+        }
+    }
 }
