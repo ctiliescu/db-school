@@ -1,4 +1,4 @@
-package db.cursul4;
+package db.cursul4.generics;
 
 import java.util.ArrayList;
 import java.util.List;
