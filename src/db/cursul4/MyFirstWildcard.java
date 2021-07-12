@@ -17,6 +17,7 @@ public class MyFirstWildcard {
         listAutomobiles(myList);
     }
 
+    // public static void listAutomobiles(List<? extends Automobile> myList)
     public static void listAutomobiles(List<Automobile> myList) {
         for(Automobile automobile : myList) {
             System.out.println(automobile.getType());
