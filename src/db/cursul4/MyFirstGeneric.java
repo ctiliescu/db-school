@@ -12,14 +12,21 @@ public class MyFirstGeneric {
 //        System.out.println(name);
         // sal
 
-        printArray(myArray);
-        printArray(mySecArray);
+        printArray2(myArray);
+        printArray2(mySecArray);
     }
 
     public static <T> void printArray(T[] myArray){
 
         for(int i = 0; i < myArray.length; i++){
             System.out.print(myArray[i] + " ");
+        }
+    }
+
+    public static <T> void printArray2(T[] myArray){
+
+        for(T object : myArray){
+            System.out.print(object + " ");
         }
     }
 }
