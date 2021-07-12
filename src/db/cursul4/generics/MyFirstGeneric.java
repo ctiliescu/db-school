@@ -1,6 +1,6 @@
-package db.cursul4;
+package db.cursul4.generics;
 
-//import static db.cursul4.MySecGeneric.*;
+//import static db.cursul4.generics.MySecGeneric.*;
 
 public class MyFirstGeneric {
     public static void main(String[] args) {
