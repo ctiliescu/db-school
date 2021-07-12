@@ -10,6 +10,7 @@ public class MyFirstGeneric {
 //        printSec2Array(mySecArray);
 //        printSecArray(mySecArray);
 //        System.out.println(name);
+        // sal
 
         printArray(myArray);
         printArray(mySecArray);
