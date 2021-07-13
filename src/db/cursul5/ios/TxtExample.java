@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.Scanner;
 
-public class Test {
+public class TxtExample {
     public static void main(String[] args) throws FileNotFoundException {
         File f = new File("data.txt");
         System.out.println(f.exists());
