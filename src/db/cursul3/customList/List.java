@@ -2,6 +2,7 @@ package db.cursul3.customList;
 
 public class List {
     private Node head;
+    private int size;
 
     public void add(String s) {
         if (head == null) {
@@ -15,13 +16,14 @@ public class List {
 
             p.setNext(new Node(s));
         }
+        ++size;
     }
     public void recursiveAdd(String s){
         if(head == null){
             head = new Node(s);
+            ++size;
         } else {
             head.add(s);
-
         }
     }
 
@@ -35,13 +37,14 @@ public class List {
     }
 
     public void add(int pos, String s) throws AddException {
-        if (pos < 0 || (head == null && pos > 0)) {
+        if (pos < 0 || size + 1 < pos) {
             throw new AddException();
         } else {
-            if (pos == 1) {
-                head.setNext(new Node(s, head.getNext()));
-            } else if (pos == 0) {
-                head = new Node(s, head);
+            if (pos == 0) {
+                Node dummy = new Node(s, null);
+                dummy.setNext(head);
+                head = dummy;
+                ++size;
             } else {
                 head.add(pos - 1 ,s);
             }
