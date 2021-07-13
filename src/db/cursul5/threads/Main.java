@@ -1,7 +1,7 @@
 package db.cursul5.threads;
 
 
-import db.cursul5.threads.inharitance.Employee;
+import db.cursul5.threads.semaphore.Employee;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
@@ -9,8 +9,6 @@ public class Main {
         for (int i = 0; i < 30; i++) {
             array[i] = new Employee(i);
             array[i].start();
-            array[i].join();
         }
-
     }
 }
