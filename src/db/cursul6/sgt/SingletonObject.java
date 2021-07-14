@@ -7,7 +7,7 @@ public class SingletonObject {
         System.out.println("Constructor Singleton!");
     }
 
-    public static SingletonObject getInstance(){
+    public static synchronized SingletonObject getInstance(){
         if(instance == null){
             instance = new SingletonObject();
         }
