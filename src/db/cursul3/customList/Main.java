@@ -8,7 +8,6 @@ public class Main {
         myList.add("sir2");
 
         myList.recursiveAdd("Theo");
-        myList.add(-2, "string3");
         myList.add(0, "string3");
         myList.add(3, "string4");
 
