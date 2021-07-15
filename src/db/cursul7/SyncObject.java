@@ -6,35 +6,27 @@ public class SyncObject {
 
     public void met1(){
         synchronized (a) {
-            System.out.println("Start met1");
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("Finish met1");
+            processing("met1");
         }
     }
 
     public void met2(){
         synchronized (b){
-            System.out.println("Start met2");
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("Finish met2");
+            processing("met2");
         }
     }
 
     public void met3(){
-        System.out.println("Start met3");
+        processing("met3");
+    }
+
+    private void processing(String met2) {
+        System.out.println("Start" + met2);
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Finish met3");
+        System.out.println("Finish" + met2);
     }
 }
