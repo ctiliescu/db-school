@@ -20,6 +20,27 @@ public class SyncObject {
         processing("met3");
     }
 
+    public void met4(){
+        synchronized (a) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            synchronized (b) {
+                processing("met4");
+            }
+        }
+    }
+
+    public void met5(){
+        synchronized (b) {
+            synchronized (a) {
+                processing("met5");
+            }
+        }
+    }
+
     private void processing(String met2) {
         System.out.println("Start" + met2);
         try {
