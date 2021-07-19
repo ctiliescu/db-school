@@ -1,4 +1,4 @@
-package db.cursurul2;
+package db.cursul2;
 
 public class ArrayTest {
 
