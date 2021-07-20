@@ -1,10 +1,12 @@
+package jdbc;
+
 public class Person {
     Integer id;
     String name;
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "jdbc.Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

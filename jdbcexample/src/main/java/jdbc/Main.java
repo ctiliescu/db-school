@@ -1,6 +1,6 @@
+package jdbc;
+
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
@@ -13,12 +13,12 @@ public class Main {
 //            stmt.executeUpdate(query);
 //        }
 //        connection.commit();
-//        List<Person> personList = new ArrayList<>();
+//        List<jdbc.Person> personList = new ArrayList<>();
 //        try (Statement stmt = connection.createStatement()) {
 //            String selectSQL = "select * from PERSONS";
 //            try (ResultSet resultSet = stmt.executeQuery(selectSQL)) {
 //                while (resultSet.next()) {
-//                    Person person = new Person();
+//                    jdbc.Person person = new jdbc.Person();
 //                    person.setId(resultSet.getInt("id"));
 //                    person.setName(resultSet.getString("name"));
 //                    personList.add(person);
@@ -40,15 +40,15 @@ public class Main {
 //                    + "position varchar(30), salary double)";
 //            stmt.execute(tableSql);
 //        }
-        String callableStatement = "{call insertEmployee(?,?,?,?)}";
-        try (CallableStatement cstmt = connection.prepareCall(callableStatement)) {
-            cstmt.setString(2, "Ana");
-            cstmt.setString(3, "Developer");
-            cstmt.setDouble(4, 2000);
-            cstmt.registerOutParameter(1, Types.INTEGER);
-            cstmt.execute();
-        }
-        connection.commit();
+//        String callableStatement = "{call insertEmployee(?,?,?,?)}";
+//        try (CallableStatement cstmt = connection.prepareCall(callableStatement)) {
+//            cstmt.setString(2, "Ana");
+//            cstmt.setString(3, "Developer");
+//            cstmt.setDouble(4, 2000);
+//            cstmt.registerOutParameter(1, Types.INTEGER);
+//            cstmt.execute();
+//        }
+//        connection.commit();
     }
 }
 
