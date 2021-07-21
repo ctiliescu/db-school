@@ -1,4 +1,4 @@
-package db.cursurul2;
+package db.cursul2;
 
 public class Dreptunghi extends Shape{
     private int l;

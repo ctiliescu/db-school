@@ -1,4 +1,4 @@
-package db.cursurul2;
+package db.cursul2;
 
 public abstract class Shape {
     private String name;
